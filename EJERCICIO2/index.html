@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <script>
+        let nombres = [];
+        function crearNombre() {
+            const nombre = prompt("Ingrese un nombre: ");
+            nombres.push(nombre);
+        }
+
+        function mostrarNombres(){
+          nombres.forEach(nombre => {
+            console.log(nombre);
+          });  
+        }
+        function eliminarNombre(){
+            nombres.pop();
+        }
+        function actualizarNombre(){
+            const posicion = prompt("Elige la posicio: "); 
+            nombres[posicion] = prompt("Ingrese un nuevo nombre: ");
+            //nombres.push(posicion);
+        }
+        do{
+            console.log("--------MENU--------");
+            console.log("1.- CREAR ");
+            console.log("2.- MOSTRAR")
+            console.log("3.- ELIMINAR ");
+            console.log("4.- ACTUALIZAR ");
+            console.log("0 .- SALIR ");
+            var op = prompt ("Elija la opcion: ");
+            opcion = parseInt(op);
+            switch(opcion){
+                case 1: 
+                    crearNombre();
+                    crearNombre();
+                    crearNombre();
+                    break;
+                case 2:
+                    mostrarNombres();
+                    break;
+                case 3: 
+                    eliminarNombre();
+                    break;
+                case 4: 
+                    actualizarNombre();
+                    break;          
+            }
+
+        }while(op!=0)
+
+        /*crearNombre();
+        crearNombre();
+        crearNombre();
+        mostrarNombres();
+        //mostrarNombres();
+        actualizarNombre();
+        mostrarNombres();
+        eliminarNombre();
+        mostrarNombres();*/
+
+
+    </script>
+</body>
+
+</html>
